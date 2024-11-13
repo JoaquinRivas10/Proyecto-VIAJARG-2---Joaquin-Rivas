@@ -241,18 +241,42 @@ body::before {
 .buscadorContenedor .buscadorInput .busqueda:hover {
   background-color: rgba(0, 0, 0, 0.062745098);
 }
-.buscadorContenedor .buscadorInput .buscadorBoton {
+.buscadorContenedor .buscadorInput .busqueda::placeholder {
+  color: #000;
+}
+.buscadorContenedor .buscadorInput .buscadorBotonContenedor {
   width: 50%;
   height: 3rem;
   background-color: rgba(135, 61, 52, 0.768627451);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.buscadorContenedor .buscadorInput .buscadorBotonContenedor .buscadorBoton {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
   color: #fff;
   border: none;
   cursor: pointer;
   font-size: 1.4rem;
   font-family: "Montserrat";
 }
-.buscadorContenedor .buscadorInput .buscadorBoton:hover {
+.buscadorContenedor .buscadorInput .buscadorBotonContenedor::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
   background-color: #873d34;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.buscadorContenedor .buscadorInput .buscadorBotonContenedor:hover::before {
+  top: 0%;
+  border-radius: 0%;
 }
 
 /*Experiencias*/
@@ -510,18 +534,39 @@ body::before {
   font-size: 1.4rem;
   text-align: center;
 }
-.paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetes {
-  font-size: 1.4rem;
-  padding: 0.5rem 1rem;
-  background-color: rgba(135, 61, 52, 0.768627451);
-  color: #fff;
+.paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor {
   width: 40%;
-  font-family: "Montserrat";
+  height: 3rem;
+  background-color: rgba(135, 61, 52, 0.768627451);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor .botonPaquetes {
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: #fff;
   border: none;
+  font-family: "Montserrat";
   cursor: pointer;
 }
-.paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetes:hover {
+.paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
   background-color: #873d34;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor:hover::before {
+  top: 0%;
+  border-radius: 0%;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
@@ -575,18 +620,39 @@ body::before {
   height: 8rem;
   font-family: "Montserrat";
 }
-.contacto .contactoFormulario form .btn {
-  font-size: 1.4rem;
-  padding: 1rem 1rem;
-  background-color: rgba(135, 61, 52, 0.768627451);
-  color: #fff;
+.contacto .contactoFormulario form .botonContactoContenedor {
   width: 100%;
+  height: 4rem;
+  background-color: rgba(135, 61, 52, 0.768627451);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.contacto .contactoFormulario form .botonContactoContenedor .btn {
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: #fff;
   font-family: "Montserrat";
   border: none;
   cursor: pointer;
 }
-.contacto .contactoFormulario form .btn:hover {
+.contacto .contactoFormulario form .botonContactoContenedor::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
   background-color: #873d34;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.contacto .contactoFormulario form .botonContactoContenedor:hover::before {
+  top: 0%;
+  border-radius: 0%;
 }
 
 /*Vista laptops, large tablets in landscape & small desktops ----- de 769 hasta 1279*/
@@ -616,8 +682,8 @@ body::before {
   .buscadorContenedor .buscadorInput .busqueda {
     font-size: 0.95rem;
   }
-  .buscadorContenedor .buscadorInput .buscadorBoton {
-    font-size: 1rem;
+  .buscadorContenedor .buscadorInput .buscadorBotonContenedor .buscadorBoton {
+    font-size: 1.2rem;
   }
   /*Experiencias*/
   .experiencias h2 {
@@ -703,7 +769,7 @@ body::before {
   .paquetes .paquetesContenedor .tarjetaPaquetes h3 {
     font-size: 1.2rem;
   }
-  .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetes {
+  .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor .botonPaquetes {
     font-size: 1.2rem;
   }
   /*CONTACTO*/
@@ -713,7 +779,7 @@ body::before {
   .contacto .contactoFormulario form .info {
     font-size: 1.2rem;
   }
-  .contacto .contactoFormulario form .btn {
+  .contacto .contactoFormulario form .botonContactoContenedor .btn {
     font-size: 1.3rem;
   }
   /*FOOTER*/
@@ -772,8 +838,11 @@ body::before {
   .buscadorContenedor .buscadorInput .busqueda {
     font-size: 0.9rem;
   }
-  .buscadorContenedor .buscadorInput .buscadorBoton {
-    font-size: 0.9rem;
+  .buscadorContenedor .buscadorInput .buscadorBotonContenedor {
+    width: 100%;
+  }
+  .buscadorContenedor .buscadorInput .buscadorBotonContenedor .buscadorBoton {
+    font-size: 1.1rem;
     width: 100%;
   }
   /*Experiencias*/
@@ -889,7 +958,7 @@ body::before {
   .paquetes .paquetesContenedor .tarjetaPaquetes h3 {
     font-size: 1.2rem;
   }
-  .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetes {
+  .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor .botonPaquetes {
     font-size: 1.1rem;
   }
   /*CONTACTO*/ /*ACOMODAR QUE NO ANDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
@@ -902,7 +971,7 @@ body::before {
   .contacto .contactoFormulario form .info {
     font-size: 0.9rem;
   }
-  .contacto .contactoFormulario form .btn {
+  .contacto .contactoFormulario form .botonContactoContenedor .btn {
     font-size: 1.1rem;
   }
   /*FOOTER*/
@@ -978,8 +1047,11 @@ body::before {
   .buscadorContenedor .buscadorInput .busqueda {
     font-size: 0.7rem;
   }
-  .buscadorContenedor .buscadorInput .buscadorBoton {
-    font-size: 0.7rem;
+  .buscadorContenedor .buscadorInput .buscadorBotonContenedor {
+    width: 100%;
+  }
+  .buscadorContenedor .buscadorInput .buscadorBotonContenedor .buscadorBoton {
+    font-size: 0.9rem;
     width: 100%;
   }
   /*Experiencias*/
@@ -1104,7 +1176,7 @@ body::before {
   .paquetes .paquetesContenedor .tarjetaPaquetes h3 {
     font-size: 1.1rem;
   }
-  .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetes {
+  .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor .botonPaquetes {
     font-size: 1rem;
   }
   /*CONTACTO*/
@@ -1117,7 +1189,7 @@ body::before {
   .contacto .contactoFormulario form .info {
     font-size: 0.7rem;
   }
-  .contacto .contactoFormulario form .btn {
+  .contacto .contactoFormulario form .botonContactoContenedor .btn {
     font-size: 0.9rem;
   }
   /*FOOTER*/

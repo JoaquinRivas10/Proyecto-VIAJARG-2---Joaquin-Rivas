@@ -93,21 +93,49 @@ body::before {
             &:hover {
                 background-color: #00000010;
             }
+
+            &::placeholder {
+                color: #000;
+            }
         }
 
-        .buscadorBoton {
+        .buscadorBotonContenedor {
             width: 50%;
             height: 3rem;
             background-color: #873d34c4;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 1.4rem;
-            font-family: $fontfamily-general;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
 
-            &:hover {
-                background-color: #873d34;
+            .buscadorBoton {
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-size: 1.4rem;
+                font-family: $fontfamily-general;
             }
+        }
+
+        .buscadorBotonContenedor::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 100%;
+            background-color: #873d34;
+            border-radius: 50%;
+            z-index: -1;
+        
+            transition: all 0.6s ease;
+        }
+        
+        .buscadorBotonContenedor:hover::before {
+            top: 0%;
+            border-radius: 0%;
         }
     }
 }
@@ -410,19 +438,43 @@ body::before {
                 text-align: center;
             }
 
-            .botonPaquetes {
-                font-size: 1.4rem;
-                padding: .5rem 1rem;
-                background-color: #873d34c4;
-                color: #fff;
+            .botonPaquetesContenedor {
                 width: 40%;
-                font-family: $fontfamily-general;
-                border: none;
-                cursor: pointer;
+                height: 3rem;
+                background-color: #873d34c4;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
 
-                &:hover {
-                    background-color: #873d34;
+                .botonPaquetes {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.4rem;
+                    background-color: transparent;
+                    color: #fff;
+                    border: none;
+                    font-family: $fontfamily-general;
+                    cursor: pointer;
                 }
+            }
+
+            .botonPaquetesContenedor::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 100%;
+                background-color: #873d34;
+                border-radius: 50%;
+                z-index: -1;
+            
+                transition: all 0.6s ease;
+            }
+
+            .botonPaquetesContenedor:hover::before {
+                top: 0%;
+                border-radius: 0%;
             }
         }
     }
@@ -488,19 +540,43 @@ body::before {
                 font-family: $fontfamily-general;
             }
 
-            .btn {
-                font-size: 1.4rem;
-                padding: 1rem 1rem;
-                background-color: #873d34c4;
-                color: #fff;
+            .botonContactoContenedor {
                 width: 100%;
-                font-family: $fontfamily-general;
-                border: none;
-                cursor: pointer;
+                height: 4rem;
+                background-color: #873d34c4;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
 
-                &:hover {
-                    background-color: #873d34;
+                .btn {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.4rem;
+                    background-color: transparent;
+                    color: #fff;
+                    font-family: $fontfamily-general;
+                    border: none;
+                    cursor: pointer;
                 }
+            }
+
+            .botonContactoContenedor::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 100%;
+                background-color: #873d34;
+                border-radius: 50%;
+                z-index: -1;
+            
+                transition: all 0.6s ease;
+            }
+
+            .botonContactoContenedor:hover::before {
+                top: 0%;
+                border-radius: 0%;
             }
         }
     }

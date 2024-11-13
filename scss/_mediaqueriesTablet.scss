@@ -71,9 +71,13 @@
                 font-size: 0.9rem;
             }
 
-            .buscadorBoton {
-                font-size: 0.9rem;
+            .buscadorBotonContenedor {
                 width: 100%;
+
+                .buscadorBoton {
+                    font-size: 1.1rem;
+                    width: 100%;
+                }
             }
         }
     }
@@ -248,9 +252,13 @@
                     font-size: 1.2rem;
                 }
 
-                .botonPaquetes {
-                    font-size: 1.1rem;
+                .botonPaquetesContenedor {
+
+                    .botonPaquetes {
+                        font-size: 1.1rem;
+                    }
                 }
+
             }
         }
     }
@@ -272,8 +280,11 @@
                     font-size: 0.9rem;
                 }
 
-                .btn {
-                    font-size: 1.1rem;
+                .botonContactoContenedor {
+
+                    .btn {
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
