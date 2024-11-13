@@ -1,0 +1,17 @@
+/*Animacion titulo buscador*/
+
+@keyframes cambiarPalabra {
+    0% {margin-top: 0px;}
+    28% {margin-top: 0px;}
+
+    33% {margin-top: -40px;}
+    61% {margin-top: -40px;}
+
+    66% {margin-top: -80px;}
+    94% {margin-top: -80px;}
+
+    99% {margin-top: -40px;}
+    99% {margin-top: -40px;}
+
+    100% {margin-top: 0px;}
+}

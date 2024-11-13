@@ -52,6 +52,11 @@
 
         .buscadorTitulo {
 
+            ul {
+                font-size: $fontsize-h2-extrasmall;
+                letter-spacing: 0px;
+            }
+
             h2 {
                 font-size: $fontsize-h2-extrasmall;
                 letter-spacing: 0px;

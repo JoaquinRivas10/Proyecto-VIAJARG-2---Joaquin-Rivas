@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'header';
 @import 'footer';
+@import 'animaciones';
 
 * {
     margin: 0;
@@ -47,6 +48,26 @@ body::before {
     box-shadow: 5px 5px 15px #5555;
 
     .buscadorTitulo {
+        display: flex;
+        height: 40px;
+        line-height: 40px;
+        overflow: hidden;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            padding-right: 15px;
+            color: #873d34;
+            letter-spacing: 5px;
+            font-size: $fontsize-h2-large;
+            font-weight: bold;
+            margin: 0;
+            animation: cambiarPalabra 6s infinite;
+
+            li {
+                margin: 0;
+            }
+        }
 
         h2 {
             font-size: $fontsize-h2-large;

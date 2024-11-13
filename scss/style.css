@@ -126,6 +126,36 @@ footer .redes .redesIconos img {
   width: 35px;
 }
 
+/*Animacion titulo buscador*/
+@keyframes cambiarPalabra {
+  0% {
+    margin-top: 0px;
+  }
+  28% {
+    margin-top: 0px;
+  }
+  33% {
+    margin-top: -40px;
+  }
+  61% {
+    margin-top: -40px;
+  }
+  66% {
+    margin-top: -80px;
+  }
+  94% {
+    margin-top: -80px;
+  }
+  99% {
+    margin-top: -40px;
+  }
+  99% {
+    margin-top: -40px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -168,6 +198,26 @@ body::before {
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 5px 5px 15px rgba(85, 85, 85, 0.3333333333);
+}
+.buscadorContenedor .buscadorTitulo {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.buscadorContenedor .buscadorTitulo ul {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 15px;
+  color: #873d34;
+  letter-spacing: 5px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 0;
+  animation: cambiarPalabra 6s infinite;
+}
+.buscadorContenedor .buscadorTitulo ul li {
+  margin: 0;
 }
 .buscadorContenedor .buscadorTitulo h2 {
   font-size: 2.3rem;
@@ -555,6 +605,10 @@ body::before {
   }
   /*INDEX*/
   /*Buscador*/
+  .buscadorContenedor .buscadorTitulo ul {
+    font-size: 2.1rem;
+    letter-spacing: 0px;
+  }
   .buscadorContenedor .buscadorTitulo h2 {
     font-size: 2.1rem;
     letter-spacing: 0px;
@@ -703,6 +757,10 @@ body::before {
   }
   /*INDEX*/
   /*Buscador*/
+  .buscadorContenedor .buscadorTitulo ul {
+    font-size: 1.9rem;
+    letter-spacing: 0px;
+  }
   .buscadorContenedor .buscadorTitulo h2 {
     font-size: 1.9rem;
     letter-spacing: 0px;
@@ -905,6 +963,10 @@ body::before {
   }
   /*INDEX*/
   /*Buscador*/
+  .buscadorContenedor .buscadorTitulo ul {
+    font-size: 1.7rem;
+    letter-spacing: 0px;
+  }
   .buscadorContenedor .buscadorTitulo h2 {
     font-size: 1.7rem;
     letter-spacing: 0px;
