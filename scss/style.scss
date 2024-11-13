@@ -368,6 +368,7 @@ body::before {
             box-shadow: 5px 5px 10px #5555;
             position: relative;
             text-align: center;
+            cursor: pointer;
 
             img {
                 width: 100%;
@@ -375,16 +376,41 @@ body::before {
                 object-fit: cover;
             }
 
-            h3 {
+            &::before {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.8rem;
+                font-weight: bold;
                 position: absolute;
+                top: 0;
+                left: 0;
                 bottom: 0;
-                color: #fff;
-                background: linear-gradient(transparent , #000);
-                width: 100%;
-                margin: 0;
-                padding: 10px;
-                font-size: 1.4rem;
+                right: 0;
+                background-color: #50b1f155;
+                transition: transform 0.2s;
+                transform: scaleY(0);
             }
+
+            &:hover::before {
+                transform: scaleY(1);
+            }
+        }
+
+        .td-mendoza::before     {
+            content: 'Mendoza';
+        }
+
+        .td-salta::before     {
+            content: 'Salta';
+        }
+
+        .td-jujuy::before     {
+            content: 'Jujuy';
+        }
+
+        .td-neuquen::before     {
+            content: 'Neuquen';
         }
 
         .tarjetaDestinos:nth-child(2) {

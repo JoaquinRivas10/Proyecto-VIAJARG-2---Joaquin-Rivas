@@ -474,21 +474,42 @@ body::before {
   box-shadow: 5px 5px 10px rgba(85, 85, 85, 0.3333333333);
   position: relative;
   text-align: center;
+  cursor: pointer;
 }
 .destinos .destinosContenedor .tarjetaDestinos img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.destinos .destinosContenedor .tarjetaDestinos h3 {
+.destinos .destinosContenedor .tarjetaDestinos::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
   position: absolute;
+  top: 0;
+  left: 0;
   bottom: 0;
-  color: #fff;
-  background: linear-gradient(transparent, #000);
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  font-size: 1.4rem;
+  right: 0;
+  background-color: rgba(80, 177, 241, 0.3333333333);
+  transition: transform 0.2s;
+  transform: scaleY(0);
+}
+.destinos .destinosContenedor .tarjetaDestinos:hover::before {
+  transform: scaleY(1);
+}
+.destinos .destinosContenedor .td-mendoza::before {
+  content: "Mendoza";
+}
+.destinos .destinosContenedor .td-salta::before {
+  content: "Salta";
+}
+.destinos .destinosContenedor .td-jujuy::before {
+  content: "Jujuy";
+}
+.destinos .destinosContenedor .td-neuquen::before {
+  content: "Neuquen";
 }
 .destinos .destinosContenedor .tarjetaDestinos:nth-child(2) {
   grid-row: span 2;
