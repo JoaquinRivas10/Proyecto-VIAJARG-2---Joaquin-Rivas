@@ -1000,7 +1000,7 @@ body::before {
   .paquetes .paquetesContenedor .tarjetaPaquetes .botonPaquetesContenedor .botonPaquetes {
     font-size: 1.1rem;
   }
-  /*CONTACTO*/ /*ACOMODAR QUE NO ANDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+  /*CONTACTO*/
   .contacto {
     grid-template-columns: 1fr;
   }
