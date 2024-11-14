@@ -252,6 +252,13 @@ body::before {
                 font-style: oblique;
                 padding: 10px;
                 box-shadow: -5px 5px 10px 5px #5553;
+                view-timeline-name: --comentarios;
+                view-timeline-axis: block;
+                animation-timeline: --comentarios;
+                animation-name: aparicion;
+                animation-range-start: entry 50%;
+                animation-range-end: cover 30%;
+                animation-fill-mode: both;
 
                 img {
                     width: 100px;

@@ -156,6 +156,17 @@ footer .redes .redesIconos img {
     margin-top: 0px;
   }
 }
+/*Animacion seccion de testimonios*/
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+    scale: 25%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -375,6 +386,13 @@ body::before {
   font-style: oblique;
   padding: 10px;
   box-shadow: -5px 5px 10px 5px rgba(85, 85, 85, 0.2);
+  view-timeline-name: --comentarios;
+  view-timeline-axis: block;
+  animation-timeline: --comentarios;
+  animation-name: aparicion;
+  animation-range-start: entry 50%;
+  animation-range-end: cover 30%;
+  animation-fill-mode: both;
 }
 .testimonios .testimoniosContenedor .tarjetasContenedor .tarjetaTestimonios img {
   width: 100px;

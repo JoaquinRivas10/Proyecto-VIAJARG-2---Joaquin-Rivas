@@ -15,3 +15,17 @@
 
     100% {margin-top: 0px;}
 }
+
+/*Animacion seccion de testimonios*/
+
+@keyframes aparicion {
+    0% {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 100%;
+    }
+}
