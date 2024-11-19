@@ -62,7 +62,7 @@ body::before {
             font-size: $fontsize-h2-large;
             font-weight: bold;
             margin: 0;
-            animation: cambiarPalabra 6s infinite;
+            animation: cambiarPalabra 12s infinite;
 
             li {
                 margin: 0;
@@ -570,6 +570,7 @@ body::before {
 
             textarea {
                 height: 8rem;
+                resize: none;
                 font-family: $fontfamily-general;
             }
 
