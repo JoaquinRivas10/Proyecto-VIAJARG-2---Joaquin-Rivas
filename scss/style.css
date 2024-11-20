@@ -2,6 +2,36 @@
 /*----------Tamaño de fuentes----------*/
 /*-----Colores de fuente-----*/
 /*----------Tipo de fuentes----------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbf9f9;
+  font-family: "Montserrat";
+  min-height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/contacto/formulario.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+}
+
 header {
   display: flex;
   height: 100px;
@@ -64,146 +94,6 @@ header .navContenedor nav ul li a {
   display: inline-block;
 }
 
-footer {
-  padding: 20px 0 20px 0;
-  display: flex;
-  justify-content: space-around;
-  margin-top: auto;
-  gap: 15px;
-  border-top: 1px solid #000;
-}
-footer .navegacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-basis: 35%;
-  text-align: center;
-}
-footer .navegacion h3 {
-  font-size: 3rem;
-  font-family: "shadows into light two";
-  letter-spacing: 5px;
-  color: #000;
-}
-footer .navegacion p a {
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-}
-footer .comunicacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-basis: 25%;
-  gap: 10px;
-}
-footer .comunicacion .tarjetaComunicacion {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #000;
-}
-footer .comunicacion .tarjetaComunicacion a img {
-  width: 25px;
-}
-footer .redes {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-basis: 35%;
-}
-footer .redes h3 {
-  font-size: 1.5rem;
-  color: #000;
-}
-footer .redes p {
-  text-align: justify;
-  color: #000;
-}
-footer .redes .redesIconos {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 50px;
-}
-footer .redes .redesIconos img {
-  width: 35px;
-}
-
-/*Animacion titulo buscador*/
-@keyframes cambiarPalabra {
-  0% {
-    margin-top: 0px;
-  }
-  16% {
-    margin-top: 0px;
-  }
-  21% {
-    margin-top: -40px;
-  }
-  37% {
-    margin-top: -40px;
-  }
-  42% {
-    margin-top: -80px;
-  }
-  58% {
-    margin-top: -80px;
-  }
-  63% {
-    margin-top: -40px;
-  }
-  79% {
-    margin-top: -40px;
-  }
-  84% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: 0px;
-  }
-}
-/*Animacion seccion de testimonios*/
-@keyframes aparicion {
-  0% {
-    opacity: 0;
-    scale: 25%;
-  }
-  100% {
-    opacity: 1;
-    scale: 100%;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #fbf9f9;
-  font-family: "Montserrat";
-  min-height: 100vh;
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -10;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../img/contacto/formulario.jpg);
-  background-size: cover;
-  background-position: center;
-  filter: blur(10px);
-}
-
-/*-------------------------------------------------------------------------------------------------------------------------------*/
 /*INDEX*/
 /*Buscador*/
 .buscadorContenedor {
@@ -701,6 +591,115 @@ body::before {
   border-radius: 0%;
 }
 
+footer {
+  padding: 20px 0 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  gap: 15px;
+  border-top: 1px solid #000;
+}
+footer .navegacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 35%;
+  text-align: center;
+}
+footer .navegacion h3 {
+  font-size: 3rem;
+  font-family: "shadows into light two";
+  letter-spacing: 5px;
+  color: #000;
+}
+footer .navegacion p a {
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+}
+footer .comunicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 25%;
+  gap: 10px;
+}
+footer .comunicacion .tarjetaComunicacion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+footer .comunicacion .tarjetaComunicacion a img {
+  width: 25px;
+}
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 35%;
+}
+footer .redes h3 {
+  font-size: 1.5rem;
+  color: #000;
+}
+footer .redes p {
+  text-align: justify;
+  color: #000;
+}
+footer .redes .redesIconos {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+footer .redes .redesIconos img {
+  width: 35px;
+}
+
+/*Animacion titulo buscador*/
+@keyframes cambiarPalabra {
+  0% {
+    margin-top: 0px;
+  }
+  16% {
+    margin-top: 0px;
+  }
+  21% {
+    margin-top: -40px;
+  }
+  37% {
+    margin-top: -40px;
+  }
+  42% {
+    margin-top: -80px;
+  }
+  58% {
+    margin-top: -80px;
+  }
+  63% {
+    margin-top: -40px;
+  }
+  79% {
+    margin-top: -40px;
+  }
+  84% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+/*Animacion seccion de testimonios*/
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+    scale: 25%;
+  }
+  100% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
 /*Vista laptops, large tablets in landscape & small desktops ----- de 769 hasta 1279*/
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
   /*BARRA DE NAVEGACION*/
